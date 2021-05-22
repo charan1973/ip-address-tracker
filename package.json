@@ -1,0 +1,13 @@
+{
+  "name": "ip-tracker",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm install --prefix server && npm run build --prefix client",
+    "start": "npm start --prefix server",
+    "dev": "npm run build --prefix client && npm run dev --prefix server",
+    "package-install": "npm i --prefix client && npm i --prefix server"
+  },
+  "author": "",
+  "license": "ISC"
+}
