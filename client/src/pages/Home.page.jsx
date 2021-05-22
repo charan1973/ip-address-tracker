@@ -1,13 +1,10 @@
-import { useContext, useEffect, useState } from "react";
+import {useEffect, useState } from "react";
 import Info from "../components/Info.component";
 import Map from "../components/Map.component";
 import Search from "../components/Search.component";
-import { UserContext } from "../context/UserContext";
 import { getIpDetails } from "../helper";
 
 function Home() {
-  const {user} = useContext(UserContext)
-
   const [info, setInfo] = useState(null);
   const [ipInput, setIpInput] = useState("");
   const [search, setSearch] = useState(false);
@@ -20,6 +17,7 @@ function Home() {
       setIpInput(data.ip)
       setLoading(false)
     })
+    // eslint-disable-next-line
   }, [search]);
 
   const handleSubmit = (e) => {

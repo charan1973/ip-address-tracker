@@ -5,7 +5,7 @@ import { createUser } from "../../helper";
 import { UserContext } from "../../context/UserContext";
 
 const Login = ({history}) => {
-  const {user, userDispatch} = useContext(UserContext);
+  const {userDispatch} = useContext(UserContext);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -19,6 +19,8 @@ const Login = ({history}) => {
     
     let sawo = new Sawo(sawoConfig)
     sawo.showForm();
+
+    // eslint-disable-next-line
   }, [])
 
   const onSuccessLogin = async(payload) => {
