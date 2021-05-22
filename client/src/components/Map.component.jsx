@@ -7,7 +7,7 @@ const markerIcon = new icon({
   iconSize: [40, 50],
 });
 
-function MyComponent(props) {
+function MapComponent(props) {
   const map = useMap();
   map.setView(props.center, props.zoom);
   return null;
@@ -28,7 +28,7 @@ const Map = ({ location }) => {
       <Marker icon={markerIcon} position={location}>
         <Popup>Your Location</Popup>
       </Marker>
-      <MyComponent center={location} zoom={13} />
+      <MapComponent center={location} zoom={13} />
     </MapContainer>
   );
 };
